@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuhui Zheng's Portfolio</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="initial-scale=1"> 
+    <meta name="description" content="Yuhui Zheng's personal page" />
+    <meta name="keywords" content="Academic, Portfolio, Contact" />
+    <meta name="author" content="Yuhui Zheng" />
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/> 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
+
+    <!--script src="js/modernizr.custom.js"></script-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+
+  </head>
+  
+  <body onload="arrangement()">
+
+
+  <script type="text/javascript">
+    function arrangement () {
+      
+      
+      console.log("Hello, World!"); 
+  
+      var wWidth = $( window ).width();
+      var wHeight = $( window ).height();
+      var fontSize;
+      var newStyle;
+  
+      /* Set absolute values for <html>: width, height, font-size */
+      if (wWidth >= 1024) {
+        fontSize = '20px';
+      }
+  
+      if ( ( wWidth < 1024 ) && ( wWidth >= 768) ) {
+        fontSize = '16px';
+      }
+  
+      if (wWidth < 768) {
+        fontSize = '10px';
+      }
+  
+  
+      console.log(wHeight, wWidth, fontSize);
+      newStyle = {'width': wWidth+'px', 'height': wHeight+'px', 'font-size': fontSize};
+      $( "html" ).css( newStyle);
+
+      $("#fileHolder").attr('src', '');
+
+      $('#report').attr('disabled', 'disabled');
+      $('#code').bind('click', false);
+
+      $("#report").css('opacity', '0.1');
+      $("#report").hover(function () {
+        $("#report").css('cursor', 'default') });
+
+      $("#code").css('opacity', '0.1');
+      $("#code").hover(function () {
+        $("#code").css('cursor', 'default') });
+
+      $("#wrapper").css('z-index', '0');
+      $("#wrapper").removeClass('hide');
+      $("#render").css('z-index','-3');
+      $("#render").addClass('hide');
+
+    }
+  </script>
+
+  <div id="wrapper">
+    <!--banner-->
+    <table width="100%">
+      <tr>
+        <td id="col1" width="30%" style="text-align:left; vertical-align:text-bottom">
+          <form action="/." method="get">
+            <button class="header1">
+              <h1>Yuhui Zheng</h1>
+            </button>
+          </form>
+        </td>
+
+        <td id="col2" width="40%" style="text-align:right; vertical-align:text-bottom"></td>
+          
+        <td id="col3" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/projects" method="get">
+            <button class="header2"><h2><u>PROJECTS</u></h2></button>
+          </form>
+        </td>
+
+        <td id="col4" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/resume" method="get">
+            <button class="header2"><h2>RESUME</h2></button>
+          </form>
+        </td>
+
+        <td id="col5" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/contact" method="get">
+            <button class="header2"><h2>CONTACT</h2></button>
+          </form>
+        </td>        
+      </tr>
+    </table>
+
+
+    <table width="100%">
+      <tr>
+        <td id="col6" width="30%" style="text-align:left; vertical-align:top" colspan="1" rowspan="2">
+          <div id="pannel">
+            <p id="e1" class="entry">Device Driver</p>
+            <p id="e2" class="entry">IPC and GC implementation</p>
+            <p id="e3" class="entry">Real-Time Embedded SW</p>
+            <p id="e4" class="entry">SW/HW Co-Design</p>
+            <p id="e5" class="entry">VLSI Physical Implementation</p>
+            <p id="e6" class="entry">Micro Architecture Modeling 1</p>
+            <p id="e7" class="entry">Micro Architecture Modeling 2</p>
+            <p id="e8" class="entry">Micro Architecture Modeling 3</p>
+            <p id="e9" class="entry">Cloud Application Demo</p>
+            <!--p id="e10" class="entry">ECC for SSD Controller</p-->
+          </div>
+        </td>
+
+        <td id="col7" width="70%" height="90%" style="text-align:left; vertical-align:top" colspan="1" rowspan="1">   
+          <div id="details">
+            <strong><p id="title" class="modHeight">Hello, World!</p></strong>
+            <i><p id="course" class="modHeight"></p></i>
+            <p class="spacer"></p>
+            <p id="platform" class="modHeight">During my graduate study at Purdue, I have taken courses in Computer Engineering area,<br> including: </p>
+            <p class="spacer"></p>
+            <p id="description" class="modHeight">
+              <li id="blah1">CS503 Operating Systems</li>
+              <li id="blah2">ECE695 System-on-Chip Design</li>
+              <li id="blah3">ECE568 Embedded Systems</li>
+              <li id="blah4">ECE565 Computer Architecture</li>
+              <li id="blah5">ECE559 MOS VLSI Design</li>
+              <li id="blah6">ECE595 Computer Network Systems</li>
+            </p>
+
+            <p id="finalWord">I have put selective projects from above courses on this site.  <br> In case linked file/source code doesn't show up as expected, please refresh this page.</p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td id="col8" width="70%" height="10%" colspan="1" rowspan="1">
+
+          <button id="report" class="btn">
+    
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+            </span>
+            <!--i class="fa fa-file-text fa-2x fa-border"></i-->
+          </button>
+
+          <a id="code"  target="_blank">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+            </span>
+            <!--i class="fa fa-terminal fa-2x fa-border"></i-->
+          </a>
+
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id="render">
+    <table id="render-table" width="100%" height="100%">
+      <tr>
+        <td class="goBack" width="18%"></td>
+
+        <td width="64%">
+          <iframe id="fileHolder" src="" frameborder="0" width="100%" height="100%"></iframe>
+        </td>
+
+        <td class="goBack" width="18%"></td>
+      </tr>
+    </table> 
+  </div>
+
+  <script type="text/javascript">
+
+    $(".entry").click( function() {
+        $(".entry").css('background-color', '#f1f1f2');
+        $(this).css('background-color', '#ddd');
+        $("#finalWord").html("");
+
+        console.log(this.id);
+
+        switch(this.id) {
+
+          /* Device Driver */
+          case "e1": 
+            $("#title").html("A Device Driver for Intel E100/Pro Ethernet Adapter");
+            $("#course").html("CS503 Operating Systems");
+            $("#platform").html("Xinu operating system on x86 architecture <br> 82545EM Gigabit Ethernet Controller<br> ANSI C");
+
+            $("#blah1").html("The project requires in-depth understanding about hardware and its interfaces presented to software. A driver on Xinu, similar to Linux, consists of 2 part: 1, A lower half takes care of interruption handling; 2, A upper half provides user interfaces. They communicate with each other using shared data structure.");
+            $("#blah2").html("The implementation is majorly focused on the upper half, which involves designing device independent I/O functions. My driver provides I/O interfaces, including initialization, open, close, read, write, control.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/CS503-lab4.pdf');
+            showBoth();
+
+            $("#code").attr('href', 'https://github.com/zhengyuhui6284/Ethernet-Driver-x86');
+            break;
+
+          /* IPC */
+          case "e2":
+            $("#title").html("Interprocess Communication and Low-level Memory Management");
+            $("#course").html("CS503 Operating Systems");
+            $("#platform").html("Xinu operating system on MIPS architecture <br> ANSI C");
+
+            $("#blah1").html("This project delves into Xinu kernel, and iplemented 2 features: Inter Process Communication(IPC) and Garbage Collection(GC).");
+            $("#blah2").html("I have iplemented IPC with synchronous/asynchronous message passing mechanisms. The former controls process state with semaphore, and the latter works through registering callback functions. Meanwhile, GC is achived with a linked list tracking memory allocation for each process.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/CS503-lab3.pdf');
+            showBoth();
+
+            $("#code").attr('href', 'https://github.com/zhengyuhui6284/IPC-GC-linksys');
+            break;
+
+          /* Maze Traversal */
+          case "e3":
+            $("#title").html("Maze Traversal and Mine Detection");
+            $("#course").html("ECE568 Embedded Systems");
+            $("#platform").html("iRobot Create® Programmable Robot <br>BeagleBoard-xM/Angstrom Linux <br> ANSI C");
+
+            $("#blah1").html("The project involves thinking collabratively about hardware sensors and realtime data processing. Given that the maze has islands and the sensors are not accurate, it demands an advanced algorithm with fault tolerant mechanism. The key step is to model the maze in to a table, with each cell of it having properties indicating whether the nearby 4 cells can be reached from the current cell. ");
+            $("#blah2").html("This project is done in a team of 3 members. I was responsible for designing maze traversal algorithm, Yusheng was responsible for sensor calibration, and Calvin was responsible for programming the main function. ");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '');
+            showCode();
+
+            $("#code").attr('href', 'https://github.com/zhengyuhui6284/iRobot_MazeTraversal');
+            break;
+
+          /* JPEG Decoder */
+          case "e4":
+            $("#title").html("JPEG Decoder Hardware/Software Co-Design");
+            $("#course").html("ECE695 SoC Design");
+            $("#platform").html("Altera tools(Quatus II, SoPC builder, Modelsim, Nios II IDE) <br> DE2 FPGA board <br> ANSI C/Verilog HDL");
+
+            $("#blah1").html("The goal of the project is to optimize the overall performance for a given JPEG decoder. In software engineering, it is typical to observe that 90% of the execution time is spent on 10% of the code. Thus, one key step of this project is profiling the application and defining the optimization targets.");
+
+            $("#blah2").html("Optimization strategies include instruction level parallelism, data level parallelism, memory subsystem configuration, hardware accelorator, and etc. In this project, I customized instruction set for NiosII core, customized instruction/data caches, and unrolled code loop, which improved the overall decoding speed upto 133%.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/ECE695-jpeg.pdf');
+            showReport();
+
+            break;
+
+          /* Wallace Tree */
+          case "e5":
+            $("#title").html("Voltage Scaling on 8*8 Wallace Tree Multiplier");
+            $("#course").html("ECE559 MOS VLSI Design");
+            $("#platform").html("Cadence Virtuoso <br>TSMC180 Process");
+
+            $("#blah1").html("Wallace Tree multiplier is an efficient way to multiply two integers. It consists of 3 parts: partial product generator, compressor, and adder. Considering the implementation cost, I took AND gate array as partial product generator, Full Adder with mirror layout as 3:2 compressor, and finally Ripple Carry Adder to generate the product.");
+
+            $("#blah2").html("Beyond the basic structure, I have optimized the critical path with Carry-Select Adder and a carry-out predictor. In this way, the multiplier can operate at a lower voltage/frequency, thus reduce power consumption. When the predictor detects a failure in critical path, the multiplier takes an additional clock cycle(with a pipeline stall) to finish calculation.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/ECE595-vlsi.pdf');
+            showReport();
+
+            break;
+
+          /* Gem5 Hands on */
+          case "e6":
+            $("#title").html("Gem5 Hands on Skills");
+            $("#course").html("ECE565 Computer Architecture");
+            $("#platform").html("Gem5 <br>C++/python");
+
+            $("#blah1").html("Gem5 is a computer system architecture simulation platform, which provides 3 interchangeable CPU models and event-driven memory system, while supports multiple ISA and full system mode. This project intends to serve as an introduction to the platform.");
+            $("#blah2").html("This project consists of 3 part: 1, disable instruction bypassing; 2, degrade branch predictor; 3, split execution stage. All the modifications are done with in-order CPU model. Detailed experiment results and .diff file are available below.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/ECE565-handon.pdf');
+            showBoth();
+
+            $("#code").attr('href', 'https://github.com/zhengyuhui6284/diff-files/blob/master/gem5-hands%20on%20practice.diff');
+
+            break;
+
+          /* Prefetching */
+          case "e7":
+            $("#title").html("Stride Directed Prefetching Using SPT");
+            $("#course").html("ECE565 Computer Architecture");
+            $("#platform").html("Gem5 <br>C++/python");
+
+            $("#blah1").html("This project reproduced partial results in <i>Stride Directed Prefetching in Scalar Processors</i>, by John W. C. Fu, Janak H. Patel and Bob L. Janssens in 1992. The original work proposed a data prefetching strategy, which intends to optimize data cache performance on scalar processors, especially for executing code loops. This project is built on top of the in-order CPU model, with L1 L2 caches and Alpha ISA.");
+            $("#blah2").html("Our team consists of two members. I was responsible to collect and analyze simulation data, while Yusheng programmed the modifications.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/ECE565p-prefetch.pdf');
+            showReport();
+
+            break;
+
+          /* RRIP */
+          case "e8":
+            $("#title").html("Cache Replacement Using Re-Reference Interval Prediction(RRIP)");
+            $("#course").html("ECE565 Computer Architecture");
+            $("#platform").html("Gem5 <br>C++/python");
+
+            $("#blah1").html("This project studies various cache replacement policies, and simulated RRIP with out-of-order CPU model and 3-level caches. RRIP is a high performance replacement policy proposed by Aamer Jaleel, Kevin B. Theobald, Simon C. Steely Jr., and Joel Emer in 2010. RRIP especially targets at programs, which have larger working set than cache size.");
+            $("#blah2").html("Our team consists of 3 members. I was responsible for system architecture configuration, Xiaomeng was responsible for programming RRIP policy, while Guanxiong was responsible for simulation.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '../files/ECE565-rrip.pdf');
+            showReport();
+
+            break;
+
+          /* GAE Demo */
+          case "e9":
+            $("#title").html("Network Protocol Visualization");
+            $("#course").html("ECE595 Computer Network Systems");
+            $("#platform").html("Google App Engine <br>Python/HTML/javascript(jQuery)/css/Ajax");
+
+            $("#blah1").html("The application demonstrates how Spanning Tree Protocol works step-by-step. Users can customize the network architecture, and save/retrieve a customized network with their account. The project involves user interface design, front-end design, server backend configuration, and data modeling.");
+            $("#blah2").html("Archiving... Relevant materials will come soon.");
+            $("#blah3").html("");
+            $("#blah4").html("");
+            $("#blah5").html("");
+            $("#blah6").html("");
+
+            $("#fileHolder").attr('src', '');
+            showNeither();
+
+            break;
+
+          /* case "e10":
+            $("#title").html("");
+            $("#course").html("");
+            $("#platform").html("");
+
+            $("#blah1").html("");
+            $("#blah2").html("");
+            $("#blah3").html("");
+            $("#blah4").html("");
+
+            $("#fileHolder").attr('src', '');
+            showReport();
+
+            break;*/
+
+          default:
+            console.log("something wrong");
+            break;
+        }
+
+        $('li').filter(function(){
+          return $.trim($(this).html()) == '';
+        }).hide()
+    });
+
+    function showReport () {
+      $('#report').removeAttr('disabled');
+      $('#code').bind('click', false);
+  
+      $("#report").css('opacity', '0.7');
+      $("#report").hover(function () {
+        $("#report").css('cursor', 'pointer') });
+  
+      $("#code").css('opacity', '0.1');
+      $("#code").hover(function () {
+        $("#code").css('cursor', 'default') });
+    }
+  
+    function showCode() {
+
+      $('#code').unbind('click', false);
+      $('#report').attr('disabled' , 'disabled');
+  
+      $("#report").css('opacity', '0.1');
+      $("#report").hover(function () {
+        $("#report").css('cursor', 'default') });
+  
+      $("#code").css('opacity', '0.7');
+      $("#code").hover(function () {
+        $("#code").css('cursor', 'pointer') });
+    }
+
+    function showBoth() {
+      $('#code').unbind('click', false);
+      $('#report').removeAttr('disabled');
+  
+      $("#report").css('opacity', '0.7');
+      $("#report").hover(function () {
+        $("#report").css('cursor', 'pointer') });
+  
+      $("#code").css('opacity', '0.7');
+      $("#code").hover(function () {
+        $("#code").css('cursor', 'pointer') });
+
+    }
+
+    function showNeither() {
+
+      $('#code').bind('click', false);
+      $('#report').attr('disabled', 'disabled');
+  
+      $("#report").css('opacity', '0.1');
+      $("#report").hover(function () {
+        $("#report").css('cursor', 'default') });
+  
+      $("#code").css('opacity', '0.1');
+      $("#code").hover(function () {
+        $("#code").css('cursor', 'default') });
+    }
+
+
+    /* click report button */
+    $("#report").click(function() {
+
+      console.log(this.id);
+
+      $("#render").css('z-index','3');
+      $("#render").removeClass('hide');
+
+      $("#wrapper").addClass('hide');
+
+    });
+
+    $(".goBack").click(function() {
+      $("#render").css('z-index','-3');
+      $("#render").addClass('hide');
+
+      $("#wrapper").removeClass('hide');
+    });
+
+
+  </script>
+
+  </body>
+</html>

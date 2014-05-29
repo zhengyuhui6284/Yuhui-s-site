@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuhui Zheng</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="initial-scale=1"> 
+    <meta name="description" content="Yuhui Zheng's personal page" />
+    <meta name="keywords" content="Academic, Portfolio, Contact" />
+    <meta name="author" content="Yuhui Zheng" />
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/> 
+
+    <script src="../js/jquery-1.11.1.min.js"></script>
+
+  </head>
+  
+  <body onload="onLoad()" width="768px">
+
+    <div id="wrapper">
+        
+        <div id="header"> 
+            <h1>Yuhui Zheng</h1>
+        </div>
+
+        <div id="render">
+            <img src="../images/penpen.png" width="20%" height="auto" />
+            
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+    function onLoad () {
+    
+        console.log("Hello, World!"); 
+    
+        var wWidth = $( window ).width();
+        var wHeight = $( window ).height();
+    
+        var newStyle = {'width': wWidth+'px', 'height': wHeight+'px'};
+    
+        console.log(wHeight, wWidth);
+    
+        $( "html" ).css( newStyle);
+        }
+    </script>
+
+  </body>
+</htmt>

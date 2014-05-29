@@ -1,0 +1,169 @@
+
+/* inport fonts */
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
+/* size, color, etc */
+html {
+	height: 100%;
+	width: 100%;
+
+	font-family: 'EB Garamond', serif;
+	font-size: 1em;
+
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+
+	background-color: #f1f1f2;
+
+	font-size: 100%;
+	color: #333333;
+	vertical-align: middle;
+}
+
+#wrapper {
+
+	display: block;
+
+	width: 90%;
+	height: 100%;
+
+	margin-left: 5%;
+	margin-right: 5%;
+
+	z-index: 0;
+}
+
+table {
+	table-layout:fixed;
+	margin-bottom: 1.5em;
+}
+
+form {
+	width: 100%;
+}
+
+.header1 {
+	font-size: 1em;
+	text-align: left;
+
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	font-family: 'EB Garamond', serif;
+	outline:none;
+}
+.header2 {
+	font-size: 0.5em;
+	text-align: right;
+
+
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	font-family: 'EB Garamond', serif;
+	outline:none;
+}
+
+/* page specific items */
+#col6 {
+	border-right: 1px;
+}
+
+#col8 {
+	text-align: left;
+	padding-left: 2em;
+}
+
+.entry {
+
+	padding-left: 2em;
+	font-size: 0.9em;
+	border-left: solid #ddd 0.2em;
+	border-right: solid #ddd 0.2em;
+
+	background-color: #f1f1f2;
+}
+
+#details {
+	padding-left: 2em;
+
+
+	font-size: 0.9em;
+}
+
+.modHeight {
+	margin-top: 0.1em;
+	margin-bottom: 0;
+
+}
+
+#report, #code {
+	opacity: 0.7;
+	color: #333;
+
+	font-size: 1em;
+}
+
+
+.btn {	
+
+	width:auto;
+	border:0 none;
+	outline:none;
+
+	margin:0;
+	padding:0;
+	background:transparent;
+}
+
+
+#report:hover,
+#code:hover {
+	cursor: pointer;
+	color: transparent;
+	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
+#render {
+	z-index: 3;
+
+	width: 100%;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+
+	text-align: center;
+
+	background-color: rgba(0,0,0,0.65);
+}
+
+.goBack:hover {
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
+/* hover effects */
+h1:hover,
+h2:hover,
+.entry:hover {
+	cursor: pointer;
+	color: transparent;
+	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.entry:hover {
+	background-color: #eaeaea;
+
+}
+
+
+

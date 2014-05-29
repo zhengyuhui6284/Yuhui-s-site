@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuhui Zheng's Portfolio</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="initial-scale=1"> 
+    <meta name="description" content="Yuhui Zheng's personal page" />
+    <meta name="keywords" content="Academic, Portfolio, Contact" />
+    <meta name="author" content="Yuhui Zheng" />
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/> 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/resume.css" />
+
+    <!--script src="js/modernizr.custom.js"></script-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+
+  </head>
+  
+  <body onload="arrangement()">
+
+
+  <script type="text/javascript">
+    function arrangement () {
+      
+      
+      console.log("Hello, World!"); 
+  
+      var wWidth = $( window ).width();
+      var wHeight = $( window ).height();
+      var fontSize;
+      var newStyle;
+
+      var frameStyle;
+      var headerHeight;
+      var frameHeight;
+  
+      /* Set absolute values for <html>: width, height, font-size */
+      if (wWidth >= 1024) {
+        fontSize = '20px';
+      }
+  
+      if ( ( wWidth < 1024 ) && ( wWidth >= 768) ) {
+        fontSize = '16px';
+      }
+  
+      if (wWidth < 768) {
+        fontSize = '10px';
+      }
+  
+  
+      console.log(wHeight, wWidth, fontSize);
+      newStyle = {'width': wWidth+'px', 'height': wHeight+'px', 'font-size': fontSize};
+      $( "html" ).css( newStyle);
+      
+    }
+  </script>
+
+  <div id="wrapper">
+    <!--banner-->
+    <table id="header" width="100%">
+      <tr>
+        <td id="col1" width="30%" style="text-align:left; vertical-align:text-bottom">
+          <form action="/." method="get">
+            <button class="header1">
+              <h1>Yuhui Zheng</h1>
+            </button>
+          </form>
+        </td>
+
+        <td id="col2" width="40%" style="text-align:right; vertical-align:text-bottom"></td>
+          
+        <td id="col3" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/projects" method="get">
+            <button class="header2"><h2>PROJECTS</h2></button>
+          </form>
+        </td>
+
+        <td id="col4" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/resume" method="get">
+            <button class="header2"><h2><u>RESUME</u></h2></button>
+          </form>
+        </td>
+
+        <td id="col5" width="10%" style="text-align:right; vertical-align:text-bottom">
+          <form action="/contact" method="get">
+            <button class="header2"><h2>CONTACT</h2></button>
+          </form>
+        </td>        
+      </tr>
+    </table>
+
+
+    <table width="100%" height="100%">
+      <tr>
+        <td id="col6" width="100%" height="100%" style="text-align:center; vertical-align:text-top">
+          <iframe src="../files/resume0514.pdf" width="64%" height="100%" frameborder="0"></iframe>
+        </td>
+      
+      </tr>
+    </table>
+    
+  </div>
+
+  </body>
+</html>

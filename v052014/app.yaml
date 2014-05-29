@@ -1,0 +1,48 @@
+application: yuhui-zheng
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /templates
+  static_dir: templates
+  application_readable: true
+
+- url: /css
+  static_dir: css
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /images
+  static_dir: images
+
+- url: /js
+  static_dir: js
+
+- url: /files
+  static_dir: files
+
+
+- url: /contact
+  script: contact.application
+
+- url: /resume
+  script: resume.application
+
+- url: /projects
+  script: projects.application
+
+- url: /.*
+  script: yuhui.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

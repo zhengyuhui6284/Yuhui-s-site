@@ -1,0 +1,83 @@
+
+/* inport fonts */
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
+/* size, color, etc */
+html {
+	height: 100%;
+	width: 100%;
+
+	font-family: 'EB Garamond', serif;
+	font-size: 1em;
+
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+	background-color: #f1f1f2;
+
+	font-size: 100%;
+	color: #333333;
+	vertical-align: middle;
+}
+
+#wrapper {
+
+	display: block;
+
+	width: 90%;
+	height: 100%;
+
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+
+table {
+	table-layout:fixed;
+	margin-bottom: 1.5em;
+}
+
+form {
+	width: 100%;
+}
+
+button {
+
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	font-family: 'EB Garamond', serif;
+	outline:none;
+}
+
+.header1 {
+	font-size: 1em;
+	text-align: left;
+}
+.header2 {
+	font-size: 0.5em;
+	text-align: right;
+}
+
+
+/* page specific items */
+
+iframe {
+	height: 100%;
+	bottom: 1em;
+}
+
+
+/* hover effects */
+h1:hover,
+h2:hover {
+	cursor: pointer;
+	color: transparent;
+	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
